@@ -1,13 +1,15 @@
 import renderScore from './renderScore.js';
-const getScore = async () => {
-  const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/5SLb2yuqigv9cgRo1gPU/scores/');
+const getScore = async (GAMEID) => {
+  const apiurl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/'+GAMEID+'/scores/';
+  const response = await fetch(apiurl);
   const data = await response.json();
   return data;
 }
 
-const refreshScores = () => {
-  getScore()
-    .then((data) => renderScore(data.result));
+const refreshScores = (GAMEID) => {
+  getScore(GAMEID)
+    .then((data) => renderScore(data.result))
+    .catch((err) => console.log(err));
 }
 
 export default refreshScores;
