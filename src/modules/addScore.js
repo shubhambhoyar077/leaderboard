@@ -1,7 +1,8 @@
-import renderScore from "./renderScore.js";
-const addScore = (name, score) =>{
+import renderScore from './renderScore.js';
+
+const addScore = (name, score) => {
   // scoreObj = ;
-  renderScore({name:name, score:score})
-}
+  renderScore({ name, score });
+};
 
 export default addScore;
