@@ -1,12 +1,11 @@
 const renderScore = (scoreRecords) => {
   const ulList = document.getElementById('scores-list');
-  ulList.innerHTML = "";
+  ulList.innerHTML = '';
   scoreRecords.sort((a, b) => b.score - a.score);
-  scoreRecords.forEach(element => {
+  scoreRecords.forEach((element) => {
     ulList.innerHTML += `
         <li class="score">${element.user}: ${element.score}</li>`;
   });
-  
 };
 
 export default renderScore;
