@@ -7,6 +7,21 @@
   <title>Leaderboard</title>
 </head>
 <body>
-  <h1>Done</h1>
+  <h1>Leaderboard</h1>
+  <section class="scores-board">
+    <h2>Recent scores</h2>
+    <button type="button" id="refresh">Refresh</button>
+    <ul class="scores-list">
+      <li class="score">Name: 100</li>
+      <li class="score">Name: 20</li>
+    </ul>
+  </section>
+  <form action="post">
+    <label for="player-name"></label>
+    <input type="text" name="player name" id="player-name" placeholder="Your name">
+    <label for="player-score"></label>
+    <input type="number" name="player score" id="player-score" placeholder="Your score">
+    <button type="submit">Submit</button>
+  </form>
 </body>
 </html>
