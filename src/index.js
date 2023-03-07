@@ -1,5 +1,6 @@
 import "./css/style.css"
 import renderScore from "./modules/renderScore.js";
+import addScore from "./modules/addScore.js";
 
 const playerScore = [
   {
@@ -29,3 +30,9 @@ const playerScore = [
 ]
 
 playerScore.forEach( element => renderScore(element));
+
+const form = document.querySelector(".score-form");
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  addScore(form.playerName.value, form.playerScore.value);
+});
