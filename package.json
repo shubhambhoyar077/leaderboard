@@ -1,0 +1,30 @@
+{
+  "name": "leaderboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --open",
+    "build": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shubhambhoyar077/leaderboard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shubhambhoyar077/leaderboard/issues"
+  },
+  "homepage": "https://github.com/shubhambhoyar077/leaderboard#readme",
+  "devDependencies": {
+    "css-loader": "^6.7.3",
+    "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  }
+}
