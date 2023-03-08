@@ -1,4 +1,3 @@
-import renderScore from './renderScore.js';
 
 const getScore = async (GAMEID) => {
   const apiurl = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${GAMEID}/scores/`;
@@ -7,9 +6,4 @@ const getScore = async (GAMEID) => {
   return data;
 };
 
-const refreshScores = (GAMEID) => {
-  getScore(GAMEID)
-    .then((data) => renderScore(data.result));
-};
-
-export default refreshScores;
+export default getScore;
