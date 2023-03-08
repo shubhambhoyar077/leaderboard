@@ -24,8 +24,8 @@ form.addEventListener('submit', (e) => {
   form.playerName.value = '';
   form.playerScore.value = '';
 });
-const refreshScores = (TESTGAMEID) => {
-  getScore(TESTGAMEID)
+const refreshScores = (GAMEID) => {
+  getScore(GAMEID)
     .then((data) => {
       renderScore(data.result);
       refreshBtn.innerHTML = `Refresh`;
