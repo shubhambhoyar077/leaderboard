@@ -94,6 +94,11 @@ button {
   padding: 20px 0;
 }
 
+.fa-crown{
+  float: right;
+  color:gold;
+}
+
 @media all and (min-width: 768px) {
   .container{
     flex-direction: row;
