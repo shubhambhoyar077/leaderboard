@@ -6,9 +6,11 @@
 ul {
   list-style: none;
 }
-body{
+
+body {
   background-color: rgb(238, 236, 236);
 }
+
 button {
   padding: 4px 10px;
   border: 2px solid black;
@@ -58,16 +60,16 @@ button {
   border-radius: 5px;
 }
 
-.scores-list li{
+.scores-list li {
   background-color: white;
 }
-.scores-list li:nth-child(1), 
-.scores-list li:nth-child(2), 
-.scores-list li:nth-child(3){
+
+.scores-list li:nth-child(1),
+.scores-list li:nth-child(2),
+.scores-list li:nth-child(3) {
   color: white;
   background-color: blueviolet;
 }
-
 
 .score-form {
   display: flex;
@@ -106,25 +108,30 @@ button {
 .form-title {
   padding: 20px 0;
 }
-.fa-crown{
+
+.fa-crown {
   float: right;
 }
-.scores-list li:nth-child(1) .fa-crown{
-  color:gold;
+
+.scores-list li:nth-child(1) .fa-crown {
+  color: gold;
 }
-.scores-list li:nth-child(2) .fa-crown{
-  color:silver;
+
+.scores-list li:nth-child(2) .fa-crown {
+  color: silver;
 }
-.scores-list li:nth-child(3) .fa-crown{
-  color:brown;
+
+.scores-list li:nth-child(3) .fa-crown {
+  color: brown;
 }
 
 @media all and (min-width: 768px) {
-  .container{
+  .container {
     flex-direction: row;
     gap: 5%;
   }
-  .score-form{
+
+  .score-form {
     width: 80%;
   }
 }
