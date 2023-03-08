@@ -7,39 +7,38 @@ ul {
   list-style: none;
 }
 
+body {
+  background-color: rgb(238, 236, 236);
+}
+
 button {
   padding: 4px 10px;
   border: 2px solid black;
   box-shadow: 4px 4px 4px black;
   width: 150px;
+  border-radius: 5px;
 }
 
 .main-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  /* justify-content: center; */
-
-  /* min-height: 100vh; */
+  justify-content: center;
   padding: 10%;
   padding-top: 5%;
 }
 
 .container {
   display: flex;
-
-  /* flex-direction: column; */
+  flex-direction: column;
   justify-content: space-between;
   width: 100%;
   max-width: 1100px;
-
-  /* padding: 5%; */
 }
 
 .title {
   align-self: flex-start;
-  font-size: 60px;
+  font-size: 50px;
   margin-left: 5%;
   margin-bottom: 5%;
   width: 100%;
@@ -47,26 +46,35 @@ button {
 
 .scores-list {
   border: 2px solid black;
+  max-height: 500px;
+  overflow-y: scroll;
+  border-radius: 5px;
 }
 
 .score {
+  margin: 1%;
   padding: 2%;
   font-size: 20px;
   font-weight: 400;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
-.scores-list li:nth-child(odd) {
+.scores-list li {
   background-color: white;
 }
 
-.scores-list li:nth-child(even) {
-  background-color: rgb(200, 198, 198);
+.scores-list li:nth-child(1),
+.scores-list li:nth-child(2),
+.scores-list li:nth-child(3) {
+  color: white;
+  background-color: blueviolet;
 }
 
 .score-form {
   display: flex;
   flex-direction: column;
-  width: 450px;
+  width: 100%;
 }
 
 .form-input {
@@ -80,6 +88,7 @@ button {
   font-weight: 400;
   margin-bottom: 3%;
   border: 2px solid black;
+  border-radius: 5px;
 }
 
 #submit {
@@ -87,7 +96,7 @@ button {
 }
 
 .scores-board {
-  width: 550px;
+  width: 100%;
 }
 
 .score-board-top {
@@ -98,4 +107,31 @@ button {
 
 .form-title {
   padding: 20px 0;
+}
+
+.fa-crown {
+  float: right;
+}
+
+.scores-list li:nth-child(1) .fa-crown {
+  color: gold;
+}
+
+.scores-list li:nth-child(2) .fa-crown {
+  color: silver;
+}
+
+.scores-list li:nth-child(3) .fa-crown {
+  color: brown;
+}
+
+@media all and (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    gap: 5%;
+  }
+
+  .score-form {
+    width: 80%;
+  }
 }

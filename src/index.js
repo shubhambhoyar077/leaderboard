@@ -1,21 +1,41 @@
 import './css/style.css';
 import addScore from './modules/addScore.js';
-import refreshScores from './modules/getScores.js';
+import getScore from './modules/getScores.js';
+import renderScore from './modules/renderScore.js';
 
 const GAMEID = 'DVaVfdLo2lw1Nv9dZDOr';
 const refreshBtn = document.getElementById('refresh');
-refreshBtn.addEventListener('click', () => refreshScores(GAMEID));
 
 const form = document.querySelector('.score-form');
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   addScore(GAMEID, form.playerName.value, form.playerScore.value)
-    .then((data) => {
-      // This console log is use for test.
-      // It will be replace in next PR when I work on styling.
-      console.log(data);
+    .then(() => {
+      form.submit.innerHTML = 'Submit';
+      form.submit.disabled = false;
+    })
+    .catch(() => {
+      form.submit.innerHTML = 'Submit';
+      form.submit.disabled = false;
     });
+  form.submit.innerHTML = 'Adding... <i class="fa fa-spinner fa-spin"></i>';
+  form.submit.disabled = true;
   form.playerName.value = '';
   form.playerScore.value = '';
 });
+const refreshScores = (GAMEID) => {
+  getScore(GAMEID)
+    .then((data) => {
+      renderScore(data.result);
+      refreshBtn.innerHTML = 'Refresh';
+      refreshBtn.disabled = false;
+    })
+    .catch(() => {
+      refreshBtn.innerHTML = 'Refresh';
+      refreshBtn.disabled = false;
+    });
+  refreshBtn.innerHTML = 'Refreshing... <i class="fa fa-spinner fa-spin"></i>';
+  refreshBtn.disabled = true;
+};
+refreshBtn.addEventListener('click', () => refreshScores(GAMEID));
 refreshScores(GAMEID);
