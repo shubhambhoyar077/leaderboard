@@ -6,7 +6,9 @@
 ul {
   list-style: none;
 }
-
+body{
+  background-color: rgb(238, 236, 236);
+}
 button {
   padding: 4px 10px;
   border: 2px solid black;
@@ -22,7 +24,6 @@ button {
   justify-content: center;
   padding: 10%;
   padding-top: 5%;
-  background-color: rgb(238, 236, 236);
 }
 
 .container {
