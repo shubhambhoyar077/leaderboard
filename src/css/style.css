@@ -41,6 +41,8 @@ button {
 
 .scores-list {
   border: 2px solid black;
+  max-height: 460px;
+  overflow-y: scroll;
 }
 
 .score {
