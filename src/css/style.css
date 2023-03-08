@@ -12,6 +12,7 @@ button {
   border: 2px solid black;
   box-shadow: 4px 4px 4px black;
   width: 150px;
+  border-radius: 5px;
 }
 
 .main-section {
@@ -21,6 +22,7 @@ button {
   justify-content: center;
   padding: 10%;
   padding-top: 5%;
+  background-color: rgb(238, 236, 236);
 }
 
 .container {
@@ -41,23 +43,30 @@ button {
 
 .scores-list {
   border: 2px solid black;
-  max-height: 460px;
+  max-height: 500px;
   overflow-y: scroll;
+  border-radius: 5px;
 }
 
 .score {
+  margin: 1%;
   padding: 2%;
   font-size: 20px;
   font-weight: 400;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
-.scores-list li:nth-child(odd) {
+.scores-list li{
   background-color: white;
 }
-
-.scores-list li:nth-child(even) {
-  background-color: rgb(200, 198, 198);
+.scores-list li:nth-child(1), 
+.scores-list li:nth-child(2), 
+.scores-list li:nth-child(3){
+  color: white;
+  background-color: blueviolet;
 }
+
 
 .score-form {
   display: flex;
@@ -76,6 +85,7 @@ button {
   font-weight: 400;
   margin-bottom: 3%;
   border: 2px solid black;
+  border-radius: 5px;
 }
 
 #submit {
@@ -95,10 +105,17 @@ button {
 .form-title {
   padding: 20px 0;
 }
-
 .fa-crown{
   float: right;
+}
+.scores-list li:nth-child(1) .fa-crown{
   color:gold;
+}
+.scores-list li:nth-child(2) .fa-crown{
+  color:silver;
+}
+.scores-list li:nth-child(3) .fa-crown{
+  color:brown;
 }
 
 @media all and (min-width: 768px) {
