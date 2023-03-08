@@ -26,7 +26,6 @@ button {
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-between;
   width: 100%;
   max-width: 1100px;
@@ -93,4 +92,14 @@ button {
 
 .form-title {
   padding: 20px 0;
+}
+
+@media all and (min-width: 768px) {
+  .container{
+    flex-direction: row;
+    gap: 5%;
+  }
+  .score-form{
+    width: 80%;
+  }
 }
